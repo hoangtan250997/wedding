@@ -1,7 +1,7 @@
 import React from "react";
-import "./sample.scss";
+import "./moment.scss";
 
-const Sample = () => {
+const Moment = () => {
   return (
     <div className="sample">
       {/* <div className="header-pic"></div>
@@ -17,4 +17,4 @@ const Sample = () => {
   );
 };
 
-export default Sample;
+export default Moment;

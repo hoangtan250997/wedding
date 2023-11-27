@@ -1,7 +1,13 @@
-
-.header {
+.background {
   height: 100%;
-  background-color: #ffffff;
+}
+.pic {
+  height: 100%;
+  width: 100%;
+  background-image: url("Footer.jpg");
+  // background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: contain;
 }
 
 .section1-content {

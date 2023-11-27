@@ -1,13 +1,23 @@
 .information {
   height: 100%;
   background-color: beige;
+
+  .frame {
+    height: 100%;
+    background-image: url(frame.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 20%;
+    background-size: contain;
+  }
+  
   .content {
     text-align: center;
     .sub-content {
       color: #fff;
       display: block;
       font-family: "Using", cursive;
-      font-size: 3em;
+      font-size: 3rem;
       padding: 10px;
     }
 
@@ -15,7 +25,7 @@
       color: #ffffff;
       display: block;
       font-family: "Signatie", cursive;
-      font-size: 6.5em;
+      font-size: 6.5rem;
       font-weight: normal;
       padding: 10px;
     }

@@ -1,9 +1,13 @@
 import React from "react";
-import "./sample.scss";
+import "./location.scss";
+import Image from "react-bootstrap/Image";
+import Van from "./van.jpg";
 
-const Sample = () => {
+const Location = () => {
   return (
     <div className="sample">
+      <Image src={Van} roundedCircle id="Van" />
+
       {/* <div className="header-pic"></div>
       <div className="section1-content">
         <span className="sub-content">Save Our Date</span>
@@ -17,4 +21,4 @@ const Sample = () => {
   );
 };
 
-export default Sample;
+export default Location;
