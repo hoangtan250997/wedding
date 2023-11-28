@@ -1,0 +1,43 @@
+// .header {
+//   height: 100%;
+// }
+.header {
+  height: 100%;
+  background-image: url("header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 20%;
+  background-size: cover;
+}
+// .header {
+//   background-image: url(header.jpg);
+//   background-repeat: no-repeat;
+//   background-position: 50% 20%;
+//   background-attachment: scroll;
+//   background-size: contain;
+//   height: 100%;
+//   margin: 0;
+//   padding-top: 40vh;
+.section1-content {
+  text-align: center;
+  padding-top: 20%;
+  .sub-content {
+    color: #fff;
+    display: block;
+    font-family: "Using", cursive;
+    font-size: 3em;
+    padding: 10px;
+  }
+
+  .main-content {
+    color: #ffffff;
+    display: block;
+    font-family: "Signatie", cursive;
+    font-size: 6.5em;
+    font-weight: normal;
+    padding: 10px;
+  }
+}
+// .img {
+//   height: 100vh;
+// }

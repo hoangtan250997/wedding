@@ -1,0 +1,42 @@
+@use "./style";
+* {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+@font-face {
+  font-family: "Signatie";
+  src: url("../public/webfonts/SVN-Signatie.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Using";
+  src: url("../public/webfonts/UVNSaigon_B.TTF");
+  font-weight: lighter;
+  font-style: normal;
+}
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap.scss";
+#sec1 {
+  height: 100vh;
+}
+#sec2 {
+  height: 50vh;
+}
+#sec3 {
+  height: 50vh;
+  background-color: #222;
+}
+#sec4 {
+  height: 50vh;
+}
+#sec5 {
+  height: 100vh;
+}
+#sec6 {
+  height: 50vh;
+}
+#sec7 {
+  height: 90vh;
+}
