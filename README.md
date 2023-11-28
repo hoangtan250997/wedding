@@ -2,6 +2,12 @@
 
 This project was created by Marshall
 
+## Change dicretory
+
+```sh
+cd /opt/code/wedding/
+```
+
 ## Create an image
 
 ```sh
