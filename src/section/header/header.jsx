@@ -1,14 +1,10 @@
 import React from "react";
 import "./header.scss";
-import headerpic from "./header.jpg";
-
-import { Image } from "react-bootstrap";
 
 const Header = () => {
   return (
     <div className="header">
-      {/* <div className="header-pic"></div> */}
-      <div className="section1-content">
+      <div className="content">
         <span className="sub-content">Save Our Date</span>
         <h1 className="main-content">Lê Sang & Thanh Vân</h1>
         <span className="sub-content">24.12.2023</span>
