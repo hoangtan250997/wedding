@@ -1,29 +1,25 @@
-
-.header {
+.moment {
   height: 100%;
   background-color: #ffffff;
-}
 
-.section1-content {
-  text-align: center;
-  padding-top: 20%;
-  .sub-content {
-    color: #fff;
-    display: block;
-    font-family: "Using", cursive;
-    font-size: 3em;
-    padding: 10px;
+  .content {
+    text-align: center;
+
+    .main-content {
+      text-align: center;
+      color: black;
+      display: block;
+      font-family: "I", cursive;
+      padding: 10px;
+    }
   }
 
-  .main-content {
-    color: #ffffff;
-    display: block;
-    font-family: "Signatie", cursive;
-    font-size: 6.5em;
-    font-weight: normal;
-    padding: 10px;
+  #Sang {
+    height: 300px;
+    width: 300px;
+  }
+  #Van {
+    height: 500px;
+    width: 500px;
   }
 }
-// .img {
-//   height: 100vh;
-// }
