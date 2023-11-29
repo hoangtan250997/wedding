@@ -12,11 +12,7 @@ const Header = () => {
       {/* <a data-scroll className="fixed-button" href="#rsvp" id="rsvpButton">
         RSVP
       </a> */}
-      <section className="section" id="section-1">
-        <h2 className="sub-heading">Lễ cưới</h2>
-        <p>Church wedding debt celebrate macarena embarrassing glitter Will.</p>
-      </section>
-    </div>
+        </div>
   );
 };
 

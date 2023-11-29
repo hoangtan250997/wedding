@@ -1,5 +1,6 @@
 .header {
   height: 100%;
+  min-width: 100vw;
   background-image: url("header.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -12,8 +13,8 @@
     .sub-content {
       color: #fff;
       display: block;
-      font-family: "Using", cursive;
-      font-size: 3em;
+      font-family: "R", cursive;
+      font-size: 3vw;
       padding: 10px;
     }
 
@@ -21,7 +22,7 @@
       color: #ffffff;
       display: block;
       font-family: "Signatie", cursive;
-      font-size: 6.5em;
+      font-size: 5vw;
       font-weight: normal;
       padding: 10px;
     }

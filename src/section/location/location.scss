@@ -2,16 +2,31 @@
   height: 100%;
   background-color: #ffffff;
   #Sang {
+    margin-top: 10%;
     margin-left: 40%;
-    height: 300px;
-    width: 300px;
+    height: 13vw;
+    width: 13vw;
   }
   #Van {
+    margin-top: 10%;
     margin-left: 40%;
-    height: 300px;
-    width: 300px;
+    height: 13vw;
+    width: 13vw;
   }
   .content {
     text-align: center;
+
+    .sub-content {
+      color: black;
+      display: block;
+      font-family: "R", cursive;
+      font-size: 1.2vw;
+    }
+    .main-content {
+      color: black;
+      display: block;
+      font-family: "I", cursive;
+      font-size: 2vw;
+    }
   }
 }
