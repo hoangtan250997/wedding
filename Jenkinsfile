@@ -1,24 +1,30 @@
 pipeline {
-  agent any
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
-  environment {
-    HEROKU_API_KEY = credentials('heroku-api-key')
-    IMAGE_NAME = 'darinpope/jenkins-example-react'
-    IMAGE_TAG = 'latest'
-    APP_NAME = 'jenkins-example-react'
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
-      }
+    agent {
+        docker {
+            image 'alpine:latest'
+            label 'master'
+            args  '-v /tmp:/tmp'
+        }
     }
-     }
-  post {
-    always {
-      sh 'docker logout'
+    stages {
+        stage('01') {
+            steps {
+                sh "echo STAGE01"
+            }
+        }
+        stage('02') {
+            steps {
+                sh "echo STAGE02"
+            }
+        }
     }
-  }
+}
+stage('Deploy') {
+    steps {
+        sh "docker stop ${IMAGE_NAME} || true && docker rm ${IMAGE_NAME} || true"
+        sh "docker run -d \
+            --name ${IMAGE_NAME} \
+            --publish ${PORT}:443 \
+            ${IMAGE_NAME}:${BUILD_ID}"
+    }
 }
