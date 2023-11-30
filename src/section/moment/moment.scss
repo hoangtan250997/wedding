@@ -13,13 +13,16 @@
       padding: 10px;
     }
   }
-
-  #Sang {
-    height: 300px;
-    width: 300px;
-  }
-  #Van {
-    height: 20vw;
-    width: 20vw;
+  .piccol {
+    text-align: center;
+    align-items: center;
+    #Sang {
+      height: 300px;
+      width: 300px;
+    }
+    #Van {
+      height: 20vw;
+      width: 20vw;
+    }
   }
 }

@@ -1,18 +1,18 @@
 .background {
   height: 100%;
-}
-.pic {
-  height: 100%;
-  width: 100%;
-  background-image: url("Footer.jpg");
-  // background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: contain;
-}
+
+// .pic {
+//   height: 100%;
+//   width: 100%;
+//   background-image: url("Footer.jpg");
+//   // background-repeat: no-repeat;
+//   background-attachment: scroll;
+//   background-size: contain;
+// }
 
 .footer-pic {
-  height: 100%;
-  // width: 100vw;
+  // height: 100%;
+  width: 100vw;
 }
 
 .section1-content {
@@ -35,6 +35,4 @@
     padding: 10px;
   }
 }
-// .img {
-//   height: 100vh;
-// }
+}

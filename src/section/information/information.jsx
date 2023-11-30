@@ -12,9 +12,8 @@ const Info = () => {
         <span className="sub-content">
           Kính mời bạn và người thương đến tham dự và chia vui
         </span>
+        <br className="break"></br>
         <span className="sub-content">cùng với chúng tôi</span>
-        <br />
-        <br />
         <span className="sub-content">
           Sự hiện diện của bạn là niềm vinh hạnh
         </span>

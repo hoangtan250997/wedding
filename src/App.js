@@ -3,7 +3,7 @@ import Header from "./section/header/header";
 import Info from "./section/information/information";
 import Location from "./section/location/location";
 import Time from "./section/time/time";
-import Event from "./section/event/event.jsx";
+import Event from "./section/event/event";
 import Moment from "./section/moment/moment";
 import Footer from "./section/footer/footer";
 function App() {
