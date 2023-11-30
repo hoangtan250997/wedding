@@ -1,9 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
 
 import "./moment.scss";
-import Image from "react-bootstrap/Image";
-import Van from "./van.jpg";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import R11 from "./R1-1.jpg";
