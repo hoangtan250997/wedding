@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./section/header/header";
 import Info from "./section/information/information";
 import Location from "./section/location/location";

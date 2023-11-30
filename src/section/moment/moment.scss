@@ -16,13 +16,36 @@
   .piccol {
     text-align: center;
     align-items: center;
+    display: block;
+    padding: auto;
+
+    .img {
+      height: 15vw !important;
+      width: 22.5vw !important;
+    }
     #Sang {
       height: 300px;
       width: 300px;
     }
+
     #Van {
-      height: 20vw;
-      width: 20vw;
+      overflow: hidden;
+      padding: 2vh;
+      border-radius: 20% !important;
+      height: 15vw !important;
+      width: 22.5vw !important;
     }
+  }
+}
+.MuiPaper-root {
+ 
+  border-radius : 2vw !important;
+  margin: 5vh;
+  height: 15vw !important;
+  width: 22.5vw !important;
+
+  .MuiCardMedia-root {
+    height: 15vw !important;
+    width: 22.5vw !important;
   }
 }
