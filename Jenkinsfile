@@ -1,30 +1,12 @@
 pipeline {
     agent {
-        docker {
-            image 'alpine:latest'
-            label 'master'
-            args  '-v /tmp:/tmp'
-        }
+        docker { image 'node:20.10.0-alpine3.18' }
     }
     stages {
-        stage('01') {
+        stage('Test') {
             steps {
-                sh "echo STAGE01"
+                sh 'node --version'
             }
         }
-        stage('02') {
-            steps {
-                sh "echo STAGE02"
-            }
-        }
-    }
-}
-stage('Deploy') {
-    steps {
-        sh "docker stop ${IMAGE_NAME} || true && docker rm ${IMAGE_NAME} || true"
-        sh "docker run -d \
-            --name ${IMAGE_NAME} \
-            --publish ${PORT}:443 \
-            ${IMAGE_NAME}:${BUILD_ID}"
     }
 }
