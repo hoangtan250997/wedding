@@ -1,7 +1,7 @@
 #! /bin/sh
 
 echo "Step 1: Building the Docker image..."
-sudo docker build -f DockerFile_Dev -t agileskills-ui .
+sudo docker build -f Dockerfile -t agileskills-ui .
 
 # Check if the Docker build was successful
 if [ $? -ne 0 ]; then
