@@ -25,13 +25,11 @@ export default function Moment() {
           <Card>
             <CardActionArea>
               <ModalImage small={R11} large={R11} alt="Hello World!" />;
-              {/* <CardMedia component="img" image={R11} /> */}
             </CardActionArea>
           </Card>
           <Card>
             <CardActionArea>
               <ModalImage small={R21} large={R21} alt="Hello World!" />;
-              {/* <CardMedia component="img" image={R21} /> */}
             </CardActionArea>
           </Card>
         </Col>
@@ -39,13 +37,11 @@ export default function Moment() {
           <Card>
             <CardActionArea>
               <ModalImage small={R12} large={R12} alt="Hello World!" />;
-              {/* <CardMedia component="img" image={R12} /> */}
             </CardActionArea>
           </Card>
           <Card>
             <CardActionArea>
               <ModalImage small={R22} large={R22} alt="Hello World!" />;
-              {/* <CardMedia component="img" image={R22} /> */}
             </CardActionArea>
           </Card>
         </Col>
@@ -53,12 +49,10 @@ export default function Moment() {
           <Card>
             <CardActionArea>
               <ModalImage small={R13} large={R13} alt="Hello World!" />;
-              {/* <CardMedia component="img" image={R13} /> */}
             </CardActionArea>
           </Card>
           <Card>
             <CardActionArea>
-              {/* <CardMedia component="img" image={R23} /> */}
               <ModalImage small={R23} large={R23} alt="Hello World!" />;
             </CardActionArea>
           </Card>

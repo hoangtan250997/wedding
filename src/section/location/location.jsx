@@ -9,13 +9,8 @@ import Map2 from "./Map2.png";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card";
-import { CardActionArea } from "@mui/material";
 import Button from "@mui/material/Button";
-import AddLocationIcon from "@mui/icons-material/AddLocation";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 const Location = () => {
   const [open1, setOpen1] = React.useState(false);
