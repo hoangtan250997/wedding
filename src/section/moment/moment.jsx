@@ -10,7 +10,6 @@ import R21 from "./R2-1.jpg";
 import R22 from "./R2-2.jpg";
 import R23 from "./R2-3.jpg";
 import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import ModalImage from "react-modal-image";
 

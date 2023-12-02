@@ -1,6 +1,5 @@
 import React from "react";
 import "./header.scss";
-import header from "./header.jpg"
 const Header = () => {
   return (
     <div className="header">
