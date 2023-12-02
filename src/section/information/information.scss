@@ -14,23 +14,31 @@
     top: -70%;
     text-align: center;
     .title-content {
+      padding: auto;
       color: black;
       display: block;
       font-family: "Signatie", cursive;
       font-size: 3vw;
     }
     .name-content {
-      color: black;
+      color: rgb(179, 122, 122);
+      padding: auto;
       display: block;
       font-family: "R", cursive;
-      font-size: 3vw;
+      font-size: 3.5vw;
     }
 
     .sub-content {
       color: black;
       display: block;
       font-family: "R", cursive;
-      font-size: 1.2vw;
+      font-size: 1vw;
+      
+    }
+    .bold-content {
+      color: black;
+      font-family: "R", cursive;
+      font-size: 1vw;
       
     }
     

@@ -9,11 +9,12 @@ const Info = () => {
       <div className="content">
         <span className="title-content">Lễ Cưới</span>
         <span className="name-content">Lê Sang & Thanh Vân </span>
+        <br />
         <span className="sub-content">
-          Kính mời bạn và người thương đến tham dự và chia vui
+          <b className="bold-content">Kính mời</b> bạn và người thương đến tham dự và chia vui
         </span>
-        <br className="break"></br>
         <span className="sub-content">cùng với chúng tôi</span>
+      <br />
         <span className="sub-content">
           Sự hiện diện của bạn là niềm vinh hạnh
         </span>

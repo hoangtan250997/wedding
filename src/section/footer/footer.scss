@@ -4,11 +4,77 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  .form {
-    padding: auto;
-    margin: auto;
-    height: 80%;
+  padding: auto;
+  align-items: center;
+  vertical-align: auto;
+  .div-form {
+    background-color: transparent;
+    font-family: "R", cursive;
+    font-size: 1vw;
+    .invitation-form {
+      height: 92%;
+      margin: auto;
+      width: 80%;
+      background-color: rgba($color: #fffafa, $alpha: 0.5);
+      text-align: center;
+      margin-top: 4%;
+      .check {
+        text-align: justify;
+        align-items: flex-start;
+        margin-left: 35%;
+        .form-check-label {
+          font-family: "R", cursive;
+          font-size: 1vw;
+        }
+      }
+      #submit-button {
+        align-items: center;
+        margin: 2%;
+        background-color: rgba($color: #fffafa, $alpha: 1);
+      }
+    }
+  }
+
+  #name {
     width: 80%;
-    background-color: rgba($color: #FFFAFA, $alpha: 0.5);
+    margin: auto;
+    #name-title {
+      font-family: "R", cursive;
+      font-size: 1vw;
+    }
+    #name-place {
+      font-family: "R", cursive;
+      font-size: 1vw;
+
+      background-color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+  }
+  #happy {
+    width: 80%;
+    margin: auto;
+    #happy-title {
+      font-family: "R", cursive;
+      font-size: 1vw;
+    }
+    #happy-content {
+      font-family: "R", cursive;
+      font-size: 1vw;
+      height: 10vh;
+      background-color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+  }
+  .name-content {
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+    font-family: "I", cursive;
+    font-size: 2vw;
+  }
+
+  .sub-content {
+    color: black;
+    display: block;
+    font-family: "R", cursive;
+    font-size: 1vw;
   }
 }

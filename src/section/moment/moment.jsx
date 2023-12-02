@@ -23,36 +23,72 @@ export default function Moment() {
         <Col xs={4} md={4} className="piccol">
           <Card>
             <CardActionArea>
-              <ModalImage small={R11} large={R11} alt="Hello World!" />;
+              <ModalImage
+                small={R11}
+                large={R11}
+                hideDownload="true"
+                hideZoom="true"
+              />
+              ;
             </CardActionArea>
           </Card>
           <Card>
             <CardActionArea>
-              <ModalImage small={R21} large={R21} alt="Hello World!" />;
+              <ModalImage
+                small={R21}
+                large={R21}
+                hideDownload="true"
+                hideZoom="true"
+              />
+              ;
             </CardActionArea>
           </Card>
         </Col>
         <Col xs={4} md={4} className="piccol">
           <Card>
             <CardActionArea>
-              <ModalImage small={R12} large={R12} alt="Hello World!" />;
+              <ModalImage
+                small={R12}
+                large={R12}
+                hideDownload="true"
+                hideZoom="true"
+              />
+              ;
             </CardActionArea>
           </Card>
           <Card>
             <CardActionArea>
-              <ModalImage small={R22} large={R22} alt="Hello World!" />;
+              <ModalImage
+                small={R22}
+                large={R22}
+                hideDownload="true"
+                hideZoom="true"
+              />
+              ;
             </CardActionArea>
           </Card>
         </Col>
         <Col xs={4} md={4} className="piccol">
           <Card>
             <CardActionArea>
-              <ModalImage small={R13} large={R13} alt="Hello World!" />;
+              <ModalImage
+                small={R13}
+                large={R13}
+                hideDownload="true"
+                hideZoom="true"
+              />
+              ;
             </CardActionArea>
           </Card>
           <Card>
             <CardActionArea>
-              <ModalImage small={R23} large={R23} alt="Hello World!" />;
+              <ModalImage
+                small={R23}
+                large={R23}
+                hideDownload="true"
+                hideZoom="true"
+              />
+              ;
             </CardActionArea>
           </Card>
         </Col>

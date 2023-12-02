@@ -33,6 +33,11 @@
       font-family: "R", cursive;
       font-size: 1.2vw;
     }
+    .bold-content {
+      color: black;
+      font-family: "R", cursive;
+      font-size: 1.2vw;
+    }
     .main-content {
       color: black;
       display: block;
@@ -58,7 +63,9 @@
     font-size: 1vw;
     color: black;
     padding: 4%;
-    margin-bottom: 5%;
+    margin-top: 5%;
+
+    margin-bottom: 7.5%;
     // border-radius: 25%;
   }
 }
