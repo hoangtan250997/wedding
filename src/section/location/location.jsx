@@ -3,7 +3,7 @@ import "./location.scss";
 import Image from "react-bootstrap/Image";
 
 import Sang from "./Sang.jpg";
-import Van from "./Van.jpg";
+import Van from "./Van1.jpg";
 import Map1 from "./Map1.png";
 import Map2 from "./Map2.png";
 
@@ -27,7 +27,6 @@ const Location = () => {
         <Col xs={6} md={6}>
           <Row>
             <img id="Sang" src={Sang} alt="" />
-            {/* <Image id="Sang" src={Van} roundedCircle /> */}
           </Row>
           <Row>
             <div className="content">
@@ -66,7 +65,6 @@ const Location = () => {
         <Col xs={6} md={6}>
           <Row>
             <img id="Van" src={Van} alt="" />
-            {/* <Image id="Van" src={Van} roundedCircle /> */}
             <div className="content">
               <p className="main-content">Nhà Gái</p>
               <p className="sub-content">11:00 Thứ bảy, ngày 23/12/2023</p>
