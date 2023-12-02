@@ -36,29 +36,38 @@
   font-style: normal;
   font-size: 4vw;
 }
+@font-face {
+  font-family: "Di";
+  src: url("../public/webfonts/digital-7.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4vw;
+}
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/bootstrap.scss";
 #sec1 {
-  width: 100vw;
-  height: 100vh;
-
+  width: 67vw;
+  height: 29vw;
 }
 #sec2 {
+  width: 67vw;
+
   height: 60vh;
 }
 #sec3 {
-  height: 70vh;
-  background-color: #222;
+  // height: 70vh;
 }
 #sec4 {
-  height: 100vh;
+  width: 67vw;
+  height: 44.57vw;
 }
 #sec5 {
-  height: 100%;
 }
 #sec6 {
   // height: 100vh;
 }
 #sec7 {
-  width: 100vw;
+  // height: 100%;
+  width: 67vw;
+  height: 30.71vw;
 }

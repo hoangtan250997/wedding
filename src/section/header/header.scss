@@ -1,20 +1,19 @@
 .header {
   height: 100%;
-  min-width: 100vw;
+
   background-image: url("header.jpg");
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: 50% 20%;
+  background-attachment: inherit;
   background-size: cover;
-
+ 
   .content {
+    padding: 13%;
     text-align: center;
-    padding-top: 20%;
     .sub-content {
       color: #fff;
       display: block;
       font-family: "R", cursive;
-      font-size: 3vw;
+      font-size: 2vw;
       padding: 10px;
     }
 
@@ -22,7 +21,7 @@
       color: #ffffff;
       display: block;
       font-family: "Signatie", cursive;
-      font-size: 5vw;
+      font-size: 4vw;
       font-weight: normal;
       padding: 10px;
     }

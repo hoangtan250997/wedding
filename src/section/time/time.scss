@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  .timer{
+    background-color: #fffafa6c;
+
+  }
   .content {
     text-align: center;
     padding-top: 20%;
@@ -23,6 +27,14 @@
       font-weight: normal;
       font-size: 5vw;
       padding: 10px;
+    }
+
+    .time-content {
+      color:white;
+      display: block;
+      font-family: "Di", cursive;
+      font-weight: normal;
+      font-size: 5vw;
     }
   }
 }

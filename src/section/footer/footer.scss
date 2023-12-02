@@ -1,38 +1,14 @@
 .background {
   height: 100%;
-
-// .pic {
-//   height: 100%;
-//   width: 100%;
-//   background-image: url("Footer.jpg");
-//   // background-repeat: no-repeat;
-//   background-attachment: scroll;
-//   background-size: contain;
-// }
-
-.footer-pic {
-  // height: 100%;
-  width: 100vw;
-}
-
-.section1-content {
-  text-align: center;
-  padding-top: 20%;
-  .sub-content {
-    color: #fff;
-    display: block;
-    font-family: "Using", cursive;
-    font-size: 3em;
-    padding: 10px;
+  background-image: url("Footer.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  .form {
+    padding: auto;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    background-color: rgba($color: #FFFAFA, $alpha: 0.5);
   }
-
-  .main-content {
-    color: #ffffff;
-    display: block;
-    font-family: "Signatie", cursive;
-    font-size: 6.5em;
-    font-weight: normal;
-    padding: 10px;
-  }
-}
 }

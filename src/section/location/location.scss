@@ -1,17 +1,28 @@
 .location {
   height: 100%;
   background-color: #ffffff;
+  .icon {
+    width: 10vw;
+    margin: auto;
+    margin-bottom: 10%;
+    font-family: "R", cursive;
+    font-size: 1vw;
+    border-radius: 2vw !important;
+
+    // width: 5vw;
+  }
   #Sang {
+    margin: auto;
     margin-top: 10%;
-    margin-left: 40%;
-    height: 13vw;
-    width: 13vw;
+    margin-bottom: 10%;
+    width: 15vw;
   }
   #Van {
+    margin: auto;
     margin-top: 10%;
-    margin-left: 40%;
-    height: 13vw;
-    width: 13vw;
+    margin-bottom: 10%;
+
+    width: 15vw;
   }
   .content {
     text-align: center;
@@ -28,5 +39,28 @@
       font-family: "I", cursive;
       font-size: 2vw;
     }
+  }
+  .MuiPaper-root {
+    border-radius: 2vw !important;
+    margin: 50%;
+    height: 15vw !important;
+    width: 22.5vw !important;
+
+    .MuiCardMedia-root {
+      height: 15vw !important;
+      width: 22.5vw !important;
+    }
+  }
+
+  #location-button {
+    // width: 50%;
+    // margin: auto;
+    background-color: rgb(204, 182, 195);
+    font-family: "R", cursive;
+    font-size: 1vw;
+    color: black;
+    padding: 4%;
+    margin-bottom: 5%;
+    // border-radius: 25%;
   }
 }
