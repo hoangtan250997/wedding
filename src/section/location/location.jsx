@@ -2,8 +2,8 @@ import React from "react";
 import "./location.scss";
 import Image from "react-bootstrap/Image";
 
-import Van from "./Van.jpg";
 import Sang from "./Sang.jpg";
+import Van from "./Sang.jpg"
 import Map1 from "./Map1.png";
 import Map2 from "./Map2.png";
 
