@@ -13,47 +13,62 @@ export default function Event() {
         mode="alternate"
         items={[
           {
+            color: "rgba(219, 154, 219, 0.506)",
+
             children: (
               <>
-                <p className="content-left" id="title">ĂN HỎI</p>
+                <p className="content-left" id="title">
+                  ĂN HỎI
+                </p>
                 <p className="content-left">09:00 - 28/05/2023</p>
                 <p className="content-left">Nhà gái</p>
-                <p className="content-left">Ấp xóm Đình, xã Bình Sơn, LT.</p>
+                <p className="content-left">
+                  Ấp xóm Đình, xã Bình Sơn, LT, ĐN.
+                </p>
               </>
             ),
           },
           {
+            color: "rgba(219, 154, 219)",
             children: (
               <>
-                <p className="content-right" id="title">LỄ VU QUY</p>
+                <p className="content-right" id="title">
+                  LỄ VU QUY
+                </p>
                 <p className="content-right">11:00 - 23/12/2023</p>
                 <p className="content-right">Nhà gái</p>
                 <p className="content-right">
-                  Ấp xóm Đình, xã Bình Sơn, LT, ĐN
+                  Ấp xóm Đình, xã Bình Sơn, LT, ĐN.
                 </p>
               </>
             ),
           },
           {
+            color: "rgba(219, 154, 219, 0.506)",
             children: (
               <>
-                <p className="content-left" id="title">LỄ RƯỚC DÂU</p>
+                <p className="content-left" id="title">
+                  LỄ RƯỚC DÂU
+                </p>
                 <p className="content-left">09:00 - 24/12/2023</p>
                 <p className="content-left">Nhà trai</p>
                 <p className="content-left">
-                  37 tổ 10 khu 14 xã Long Đức, LT, ĐN
+                  37 tổ 10 khu 14 xã Long Đức, LT, ĐN.
                 </p>
               </>
             ),
           },
           {
+            color: "rgba(219, 154, 219)",
             children: (
               <>
-                <p className="content-right" id="title">ĐÁM CƯỚI</p>
+                <p className="content-right" id="title">
+                  ĐÁM CƯỚI
+                </p>
                 <p className="content-right">11:00 - 24/12/2023</p>
                 <p className="content-right">Nhà trai</p>
                 <p className="content-right">
-                  37 tổ 10 khu 14 xã Long Đức, LT, ĐN
+                  37 tổ 10 khu 14 xã Long Đức, LT, ĐN.
                 </p>
               </>
             ),

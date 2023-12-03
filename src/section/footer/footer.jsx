@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import InputGroup from "react-bootstrap/InputGroup";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import footerPic from "./Footer.jpg";
 const Footer = () => {
   const [item, setItem] = useState({ kindOfStand: "", another: "another" });
 
@@ -24,8 +25,9 @@ const Footer = () => {
   };
   return (
     <div className="background">
-      <Card className="div-form">
-        <Form className="invitation-form">
+    <img src={footerPic} alt="" className="footerPic"/>
+        <Form className="invitation-form" >
+        <div  id="group">
           <h1 className="name-content">Bạn sẽ đến chứ</h1>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Row>
@@ -95,8 +97,8 @@ const Footer = () => {
           <Button variant="containeried" type="submit" id="submit-button">
             <MailOutlineIcon></MailOutlineIcon>
           </Button>
+          </div>
         </Form>
-      </Card>
     </div>
   );
 };

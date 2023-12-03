@@ -1,80 +1,89 @@
 .background {
-  height: 100%;
-  background-image: url("Footer.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  padding: auto;
-  align-items: center;
-  vertical-align: auto;
-  .div-form {
-    background-color: transparent;
-    font-family: "R", cursive;
-    font-size: 1vw;
-    .invitation-form {
-      height: 92%;
-      margin: auto;
-      width: 80%;
-      background-color: rgba($color: #fffafa, $alpha: 0.5);
-      text-align: center;
-      margin-top: 4%;
+  position: relative;
+  text-align: center;
+  .footerPic {
+    width: 100%;
+  }
+
+  .invitation-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    
+    .form-check-input{
+      font-size: 1rem;
+
+    }
+    // height: 90%;
+    background-color: rgba($color: #fffafa, $alpha: 0.5);
+    text-align: center;
+    width: 100%;
+
+    #group {
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
       .check {
-        // text-align: justify;
-        // align-items: flex-start;
-        // margin-left: 35%;
+        font-size: 1rem;
         .form-check-label {
           font-family: "R", cursive;
-          font-size: 1vw;
+          font-size: 1rem;
         }
       }
       #submit-button {
-        align-items: center;
         margin: 2%;
         background-color: rgba($color: #fffafa, $alpha: 1);
       }
-    }
-  }
+      #name {
+        width: 80%;
+        margin: auto;
+        font-size: 1rem;
 
-  #name {
-    width: 80%;
-    margin: auto;
-    #name-title {
-      font-family: "R", cursive;
-      font-size: 1vw;
-    }
-    #name-place {
-      font-family: "R", cursive;
-      font-size: 1vw;
+        #name-title {
+          font-family: "R", cursive;
+          font-size: 1rem;
+        }
+        #name-place {
+          font-family: "R", cursive;
+          font-size: 1rem;
 
-      background-color: rgba($color: #ffffff, $alpha: 0.7);
+          background-color: rgba($color: #ffffff, $alpha: 0.7);
+        }
+      }
+      .input-group {
+        width: 80%;
+        margin: auto;
+        height:  1rem;
+        #happy-title {
+          font-family: "R", cursive;
+          font-size: 1rem;
+        }
+        #happy-content {
+          font-family: "R", cursive;
+          font-size: 1rem;
+          height: 10vh;
+          background-color: rgba($color: #ffffff, $alpha: 0.7);
+        }
+      }
+     
     }
   }
-  #happy {
-    width: 80%;
-    margin: auto;
-    #happy-title {
-      font-family: "R", cursive;
-      font-size: 1vw;
-    }
-    #happy-content {
-      font-family: "R", cursive;
-      font-size: 1vw;
-      height: 10vh;
-      background-color: rgba($color: #ffffff, $alpha: 0.7);
-    }
-  }
-  .name-content {
-    text-align: center;
-    padding: 5%;
-    margin: auto;
-    font-family: "I", cursive;
-    font-size: 2vw;
-  }
+}
 
-  .sub-content {
-    color: black;
-    display: block;
-    font-family: "R", cursive;
-    font-size: 1vw;
-  }
+.sub-content {
+  color: black;
+  display: block;
+  font-family: "R", cursive;
+  font-size: 1.5rem;
+}
+.name-content {
+  text-align: center;
+  margin: auto;
+  font-family: "I", cursive;
+  font-size: 1.5rem;
+  padding: 2%;
 }

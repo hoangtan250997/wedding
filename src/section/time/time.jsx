@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./time.scss";
-import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { Card } from "antd";
-import { colors } from "@mui/material";
-import Fab from "@mui/material/Fab";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import timePic from "./time.jpg";
 const Time = () => {
   const [timeLeft, setTimeLeft] = useState({});
 
@@ -24,55 +19,26 @@ const Time = () => {
   }, []);
   return (
     <div className="time">
+      <img src={timePic} alt="" id="time-pic" />
+      <span className="main-content" id="title">Đám cưới của chúng mình</span>
+
       <div className="content">
-        <span className="main-content">Đám cưới của chúng mình</span>
-        <h1 className="sub-content">Ngày 24 tháng 12 năm 2023</h1>
-        {/* <Card
-          hoverable
-          style={{
-            width: 240,
-          }}
-          cover={
-            <>
-              <span className="time-content"> {timeLeft.seconds} </span>
-            </>
-          }
-        ></Card>
-        <Paper
-          sx={{
-            backgroundColor: "black",
-            textAlign: "center",
-          }}
-        >
-          {" "}
-          <span className="time-content"> {timeLeft.minutes} </span>
-          <span> {timeLeft.minutes} </span>
-        </Paper>{" "}
-        <Fab
-          variant="extended"
-          sx={{
-            backgroundColor: "black",
-            textAlign: "center",
-          }}
-        >
-          <span className="time-content"> {timeLeft.seconds}</span>
-          <span> phutút</span>
-        </Fab> */}
-        <Row className="timer"
-        >
-          <Col xs={3} md={3}>
+        <h1 className="sub-content">24 - 12 - 2023</h1>
+
+        <Row className="timer">
+          <Col>
             <span className="time-content">{timeLeft.days} </span>
             <span className="sub-content">ngày</span>
           </Col>
-          <Col xs={3} md={3}>
+          <Col>
             <span className="time-content">{timeLeft.hours} </span>
             <span className="sub-content">giờ</span>
           </Col>
-          <Col xs={3} md={3}>
+          <Col>
             <span className="time-content">{timeLeft.minutes} </span>
             <span className="sub-content">phút</span>
           </Col>
-          <Col xs={3} md={3}>
+          <Col>
             <span className="time-content">{timeLeft.seconds} </span>
             <span className="sub-content">giây</span>
           </Col>

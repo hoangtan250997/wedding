@@ -1,29 +1,29 @@
 .header {
-  // height: 100%;
-  background-image: url("header.jpg");
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  background-size: cover;
-
+  position: relative;
+  text-align: center;
+  #header-pic {
+    width: 100%;
+  }
   .content {
-    padding: 13%;
-    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .sub-content {
-      color: #fff;
+      color: #ffffff;
       display: block;
       font-family: "R", cursive;
-      font-size: 2vw;
+      font-size: 2rem;
       padding: 10px;
     }
-
     .main-content {
       color: #ffffff;
       display: block;
       font-family: "Signatie", cursive;
-      font-size: 4vw;
       font-weight: normal;
+      font-size: 3.5rem;
       padding: 10px;
     }
   }
-  
 }

@@ -10,7 +10,7 @@ import Col from "react-bootstrap/Col";
 import { useMediaQuery } from 'react-responsive';
 
 function App() {
-  const isMinWidth400 = useMediaQuery({ minWidth: 800 });
+  const isMinWidth400 = useMediaQuery({ minWidth: 1400 });
 
   return (
     <div className="App">

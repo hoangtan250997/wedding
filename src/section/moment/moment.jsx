@@ -17,7 +17,9 @@ export default function Moment() {
   return (
     <div className="moment">
       <div className="content">
+      <Row id="title">
         <h1 className="main-content">Khoảnh khắc bên nhau</h1>
+        </Row>
       </div>
       <Row>
         <Col xs={4} md={4} className="piccol">

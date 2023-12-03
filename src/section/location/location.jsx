@@ -16,9 +16,7 @@ const Location = () => {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
 
-  const handleOpen1 = () => setOpen1(true);
   const handleClose1 = () => setOpen1(false);
-  const handleOpen2 = () => setOpen2(true);
   const handleClose2 = () => setOpen2(false);
 
   return (
@@ -37,7 +35,7 @@ const Location = () => {
               <p className="sub-content">
                 Tại:{" "}
                 <b className="bold-content">
-                  Khuôn viên Nhà máy cao su Long Thành
+                  Nhà máy cao su Long Thành
                 </b>
               </p>
               <p className="sub-content">Khu 14 xã Long Đức, LT, ĐN</p>

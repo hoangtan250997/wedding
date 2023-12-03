@@ -15,7 +15,6 @@
   src: url("../public/webfonts/UVNSaigon_B.TTF");
   font-weight: lighter;
   font-style: normal;
-  font-size: 4vw;
 }
 @font-face {
   font-family: "R";
@@ -34,47 +33,34 @@
   src: url("../public/webfonts/UVNSaigon_I.TTF");
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
 }
 @font-face {
   font-family: "Di";
   src: url("../public/webfonts/digital-7.ttf");
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
 }
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/bootstrap.scss";
 
-#sec1 {
-  // width: 67vw;
-  // height: 29vw;
-}
-#sec2 {
-  // width: 67vw;
-
-  // height: 60vh;
-}
-#sec3 {
-  // height: 70vh;
-}
-#sec4 {
-  // width: 67vw;
-  // height: 44.57vw;
-}
-#sec5 {
-}
-#sec6 {
-  // height: 100vh;
-}
-#sec7 {
-  // height: 100%;
-  // width: 67vw;
-  // height: 30.71vw;
-}
-@media screen and (max-width: 1000px) {
-  #sec1 {
-        color: black !important;
-    font-family: "R", cursive;
+html {
+ 
+  @media screen and (min-width: 100px) {
+    font-size: 8px !important;
+  }
+  @media screen and (min-width: 550px) {
+    font-size: 10px !important;
+  }
+  @media screen and (min-width: 700px) {
+    font-size: 13px !important;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 18px !important;
+  }
+  @media screen and (min-width: 1300px) {
+    font-size: 20px !important;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 32px !important;
   }
 }

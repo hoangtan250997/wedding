@@ -1,40 +1,52 @@
 .time {
-  height: 100%;
-  width: 100%;
-  background-image: url("time.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  .timer{
-    background-color: rgba(219, 154, 219, 0.506);
+  position: relative;
+  text-align: center;
+
+  #time-pic {
+    width: 100%;
+    filter: brightness(80%);
+  }
+  #title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 
   }
   .content {
-    text-align: center;
-    padding-top: 20%;
-    .sub-content {
-      color: #fff;
-      display: block;
-      font-family: "R", cursive;
-      font-size: 3vw;
-      padding: 10px;
-    }
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  .sub-content {
+    color: #fff;
+    display: block;
+    font-family: "R", cursive;
+    padding: 10px;
+    font-size: 2.5rem;
+  }
 
-    .main-content {
-      color: #ffffff;
-      display: block;
-      font-family: "R", cursive;
-      font-weight: normal;
-      font-size: 4.5vw;
-      padding: 10px;
-    }
+  .main-content {
+    color: #ffffff;
+    display: block;
+    font-family: "R", cursive;
+    font-weight: normal;
+    padding: 10px;
+    font-size: 3rem;
+  }
 
-    .time-content {
-      color:white;
-      display: block;
-      font-family: "Di", cursive;
-      font-weight: normal;
-      font-size: 5vw;
-    }
+  .time-content {
+    color: white;
+    display: block;
+    font-family: "Di", cursive;
+    font-weight: normal;
+    font-size: 3.5rem;
+  }
+  .timer {
+    background-color: rgba(219, 154, 219, 0.506);
   }
 }

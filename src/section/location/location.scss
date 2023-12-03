@@ -2,27 +2,27 @@
   height: 100%;
   background-color: #ffffff;
   .icon {
-    width: 10vw;
+    width: auto;
     margin: auto;
-    margin-bottom: 10%;
-    font-family: "R", cursive;
-    font-size: 1vw;
-    border-radius: 2vw !important;
-
-    // width: 5vw;
+    margin-bottom: 6%;
+    font-family: "Using", cursive;
+    font-size: 1rem !important;
+    border-radius: 1rem !important;
+    padding: 4%;
+    background-color: rgb(204, 182, 195);
+    color: black;
   }
   #Sang {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 10%;
-    width: 15vw;
+    width: 30vw;
   }
   #Van {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 10%;
-
-    width: 15vw;
+    width: 30vw;
   }
   .content {
     text-align: center;
@@ -31,18 +31,18 @@
       color: black;
       display: block;
       font-family: "R", cursive;
-      font-size: 1.2vw;
+      font-size: 1.2rem;
     }
     .bold-content {
       color: black;
       font-family: "R", cursive;
-      font-size: 1.2vw;
+      font-size: 1.2rem;
     }
     .main-content {
       color: black;
       display: block;
       font-family: "I", cursive;
-      font-size: 2vw;
+      font-size: 2rem;
     }
   }
   .MuiPaper-root {
@@ -57,15 +57,4 @@
     }
   }
 
-  #location-button {
-    background-color: rgb(204, 182, 195);
-    font-family: "R", cursive;
-    font-size: 1vw;
-    color: black;
-    padding: 4%;
-    margin-top: 5%;
-
-    margin-bottom: 7.5%;
-    // border-radius: 25%;
-  }
 }

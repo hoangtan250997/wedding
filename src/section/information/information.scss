@@ -1,15 +1,13 @@
 .information {
-  // height: 100%;
   background-color: #FFFAFA;
   position: relative;
   overflow:visible; 
 
   .frame {
     height: 88%;
-    width: 80%;
-    padding-left: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3.5%;
 
     position: absolute;
     top: 0;
@@ -22,33 +20,30 @@
     text-align: center;
     padding-top: 4%;
     padding-bottom: 4%;
-
+    br { content: ""; display: block; margin: 2rem; }
     .title-content {
-      padding: auto;
       color: black;
       display: block;
       font-family: "Signatie", cursive;
-      font-size: 3vw;
+      font-size: 3rem;
     }
     .name-content {
       color: rgb(179, 122, 122);
-      padding: auto;
-      display: block;
       font-family: "R", cursive;
-      font-size: 3.5vw;
+      font-size: 3rem;
     }
 
     .sub-content {
       color: black;
       display: block;
       font-family: "R", cursive;
-      font-size: 1vw;
+      font-size: 1.5rem;
       
     }
     .bold-content {
       color: black;
       font-family: "R", cursive;
-      font-size: 1vw;
+      font-size: 1.5rem;
       
     }
     
