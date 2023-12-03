@@ -24,65 +24,78 @@ const Footer = () => {
   };
   return (
     <div className="background">
-    <Card className="div-form">
-      <Form className="invitation-form">
-        <h1 className="name-content">Bạn sẽ đến chứ</h1>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check
-        
-            value="design"
-            type="radio"
-            aria-label="radio 1"
-            label="Có, tôi sẽ đến tham dự"
-            className="check"
+      <Card className="div-form">
+        <Form className="invitation-form">
+          <h1 className="name-content">Bạn sẽ đến chứ</h1>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Row>
+              <Col xs={2} md={2}></Col>
+              <Col xs={8} md={8}>
+                <Form.Check
+                  value="design"
+                  type="radio"
+                  aria-label="radio 1"
+                  label="Chúng mình sẽ đến tham dự vào ngày 23/12 (Tiệc Nhà Gái)"
+                  className="check"
+                  onChange={handleChange}
+                  checked={kindOfStand === "gai"}
+                />
+                <Form.Check
+                  value="food"
+                  type="radio"
+                  aria-label="radio 2"
+                  label=" Chúng mình sẽ đến tham dự vào ngày 24/12 (Tiệc Nhà Trai)"
+                  onChange={handleChange}
+                  checked={kindOfStand === "trai"}
+                  className="check"
+                />
+                <Form.Check
+                  value="khong"
+                  type="radio"
+                  aria-label="radio 2"
+                  label="Tiếc quá, chúng mình không đến tham dự được rồi"
+                  onChange={handleChange}
+                  checked={kindOfStand === "khong"}
+                  className="check"
+                />
+              </Col>
+              <Col xs={2} md={2}></Col>
+            </Row>
+          </Form.Group>
 
-            onChange={handleChange}
-            checked={kindOfStand === "design"}
-          />
-          <Form.Check
-            value="food"
-            type="radio"
-            aria-label="radio 2"
-            label="Xin lỗi, chúng tôi không tham dự được"
-            onChange={handleChange}
-            checked={kindOfStand === "food"}
-            className="check"
-          />
-        </Form.Group>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicEmail" id="name">
+                <Form.Label id="name-title">Tên của bạn</Form.Label>
+                <Form.Control type="email" id="name-place" />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group
+                className="mb-3"
+                controlId="formBasicPassword"
+                id="name"
+              >
+                <Form.Label id="name-title">Số điện thoại</Form.Label>
+                <Form.Control type="text" id="name-place" />
+              </Form.Group>
+            </Col>
+          </Row>
 
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail" id="name">
-              <Form.Label id="name-title">Tên của bạn</Form.Label>
-              <Form.Control type="email" id="name-place" />
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group
-              className="mb-3"
-              controlId="formBasicPassword"
-              id="name"
-            >
-              <Form.Label id="name-title">Số điện thoại</Form.Label>
-              <Form.Control type="text" id="name-place" />
-            </Form.Group>
-          </Col>
-        </Row>
-
-        <Row>
-          <InputGroup id="happy">
-            <InputGroup.Text id="happy-title">Lời chúc</InputGroup.Text>
-            <Form.Control
-              as="textarea"
-              aria-label="With textarea"
-              id="happy-content"
-            />
-          </InputGroup>
-        </Row>
-        <Button variant="containeried" type="submit" id="submit-button">
-          <MailOutlineIcon></MailOutlineIcon>
-        </Button>
-      </Form>
+          <Row>
+            <InputGroup id="happy">
+              <InputGroup.Text id="happy-title">Lời chúc</InputGroup.Text>
+              <Form.Control
+                as="textarea"
+                aria-label="With textarea"
+                id="happy-content"
+              />
+            </InputGroup>
+          </Row>
+          <Button variant="containeried" type="submit" id="submit-button">
+            <MailOutlineIcon></MailOutlineIcon>
+          </Button>
+        </Form>
       </Card>
     </div>
   );

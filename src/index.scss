@@ -45,21 +45,22 @@
 }
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/bootstrap.scss";
+
 #sec1 {
-  width: 67vw;
-  height: 29vw;
+  // width: 67vw;
+  // height: 29vw;
 }
 #sec2 {
-  width: 67vw;
+  // width: 67vw;
 
-  height: 60vh;
+  // height: 60vh;
 }
 #sec3 {
   // height: 70vh;
 }
 #sec4 {
-  width: 67vw;
-  height: 44.57vw;
+  // width: 67vw;
+  // height: 44.57vw;
 }
 #sec5 {
 }
@@ -68,6 +69,12 @@
 }
 #sec7 {
   // height: 100%;
-  width: 67vw;
-  height: 30.71vw;
+  // width: 67vw;
+  // height: 30.71vw;
+}
+@media screen and (max-width: 1000px) {
+  #sec1 {
+        color: black !important;
+    font-family: "R", cursive;
+  }
 }
