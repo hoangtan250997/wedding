@@ -11,27 +11,43 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    
-    .form-check-input{
-      font-size: 1rem;
 
+    .form-check-input {
+      font-size: 1.2rem;
     }
-    // height: 90%;
-    background-color: rgba($color: #fffafa, $alpha: 0.5);
-    text-align: center;
-    width: 100%;
 
     #group {
       position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      background-color: rgba($color: #fffafa, $alpha: 0.5);
+      text-align: center;
+      .name-content {
+        font-family: "Signatie", cursive;
+        font-size: 3rem;
+        font-weight: bold;
+        @media screen and (max-width: 1450px) {
+          font-size: 2rem;
+          padding-top: 5%;
+        }
+      }
       .check {
-        font-size: 1rem;
+        padding-left: 10%;
+        text-align: center;
+        font-size: 1.2rem;
+        @media screen and (max-width: 850px) {
+          font-size: 1rem;
+        }
         .form-check-label {
           font-family: "R", cursive;
-          font-size: 1rem;
+          font-size: 1.2rem;
+        }
+        .form-check-input {
+          text-align: right;
+          align-items: end;
+          font-size: 1.2rem;
         }
       }
       #submit-button {
@@ -41,15 +57,15 @@
       #name {
         width: 80%;
         margin: auto;
-        font-size: 1rem;
+        font-size: 1.2rem;
 
         #name-title {
           font-family: "R", cursive;
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
         #name-place {
           font-family: "R", cursive;
-          font-size: 1rem;
+          font-size: 1.2rem;
 
           background-color: rgba($color: #ffffff, $alpha: 0.7);
         }
@@ -59,16 +75,14 @@
         margin: auto;
         #happy-title {
           font-family: "R", cursive;
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
         #happy-content {
           font-family: "R", cursive;
-          font-size: 1rem;
-          height: 10vh;
+          font-size: 1.2rem;
           background-color: rgba($color: #ffffff, $alpha: 0.7);
         }
       }
-     
     }
   }
 }
@@ -77,12 +91,12 @@
   color: black;
   display: block;
   font-family: "R", cursive;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .name-content {
   text-align: center;
   margin: auto;
   font-family: "I", cursive;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 2%;
 }
