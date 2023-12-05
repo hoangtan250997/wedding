@@ -24,6 +24,11 @@
       width: 100%;
       background-color: rgba($color: #fffafa, $alpha: 0.5);
       text-align: center;
+
+      #required{
+        font-size: 0.7rem;
+
+      }
       .name-content {
         font-family: "Signatie", cursive;
         font-size: 3rem;

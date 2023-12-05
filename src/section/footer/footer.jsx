@@ -14,7 +14,7 @@ const Footer = () => {
   const [formData, setFormData] = useState({
     name: "",
     num: "",
-    choice: "",
+    check: "",
     wish: "",
   });
   const isMinWidth850 = useMediaQuery({ minWidth: 1450 });
@@ -24,7 +24,7 @@ const Footer = () => {
   const { kindOfStand } = item;
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name);
+    console.log(e);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -34,29 +34,46 @@ const Footer = () => {
   const handleChangeOtion = (e) => {
     e.persist();
     console.log(e.target.value);
-
+    formData.check = e.target.value;
     setItem((prevState) => ({
       ...prevState,
       kindOfStand: e.target.value,
     }));
   };
-  const handleSubmit = () => {
-    // Here you can send the selected option to your API
-    console.log("Selected Option:", formData);
-    // Add your API call logic here
+
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    console.log(formData);
+    setValidated(true);
   };
   return (
     <div className="background">
       <img src={footerPic} alt="" className="footerPic" />
-      <Form className="invitation-form">
+      <Form
+        className="invitation-form"
+        noValidate
+        validated={validated}
+        onSubmit={handleSubmit}
+      >
         <div id="group">
           {isMinWidth850 ? (
             <>
               <h1 className="name-content">Bạn sẽ đến chứ</h1>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Row>
-                  <Col xs={2} md={2}></Col>
-                  <Col xs={8} md={8}>
+
+              <Row>
+                <Col xs={2} md={2}></Col>
+                <Col xs={8} md={8}>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="validationCustom01"
+                    id="check"
+                  >
                     <Form.Check
                       value={item.gai}
                       type="radio"
@@ -65,6 +82,7 @@ const Footer = () => {
                       className="check"
                       onChange={handleChangeOtion}
                       checked={kindOfStand === item.gai}
+                      required
                     />
                     <Form.Check
                       value={item.trai}
@@ -74,6 +92,7 @@ const Footer = () => {
                       onChange={handleChangeOtion}
                       checked={kindOfStand === item.trai}
                       className="check"
+                      required
                     />
                     <Form.Check
                       value={item.no}
@@ -83,25 +102,31 @@ const Footer = () => {
                       onChange={handleChangeOtion}
                       checked={kindOfStand === item.no}
                       className="check"
+                      required
                     />
-                  </Col>
-                  <Col xs={2} md={2}></Col>
-                </Row>
-              </Form.Group>
+                  </Form.Group>
+                </Col>
+                <Col xs={2} md={2}></Col>
+              </Row>
 
               <Row>
                 <Col>
                   <Form.Group
                     className="mb-3"
-                    controlId="formBasicEmail"
+                    controlId="validationCustom02"
                     id="name"
                   >
                     <Form.Label id="name-title">Tên của bạn</Form.Label>
                     <Form.Control
                       type="text"
                       id="name-place"
+                      name="name"
                       onChange={handleChange}
+                      required
                     />
+                    <Form.Control.Feedback type="invalid" id="required">
+                      Vui lòng nhập tên của bạn.
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
                 <Col>
@@ -112,8 +137,9 @@ const Footer = () => {
                   >
                     <Form.Label id="name-title">Số điện thoại</Form.Label>
                     <Form.Control
-                      type="text"
+                      type="number"
                       id="name-place"
+                      name="num"
                       value={formData.num}
                       onChange={handleChange}
                     />
@@ -125,7 +151,8 @@ const Footer = () => {
             <Row>
               <Col xs={8} md={8}>
                 <h1 className="name-content">Bạn sẽ đến chứ</h1>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Group className="mb-3" controlId="validationCustom03">
+                  {" "}
                   <Row>
                     <Form.Check
                       value={item.gai}
@@ -161,11 +188,20 @@ const Footer = () => {
               <Col xs={4} md={4}>
                 <Form.Group
                   className="mb-3"
-                  controlId="formBasicEmail"
+                  controlId="validationCustom02"
                   id="name"
                 >
                   <Form.Label id="name-title">Tên của bạn</Form.Label>
-                  <Form.Control type="email" id="name-place" />
+                  <Form.Control
+                    type="text"
+                    id="name-place"
+                    name="name"
+                    onChange={handleChange}
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid" id="required">
+                      Vui lòng nhập tên của bạn.
+                    </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group
@@ -174,7 +210,13 @@ const Footer = () => {
                   id="name"
                 >
                   <Form.Label id="name-title">Số điện thoại</Form.Label>
-                  <Form.Control type="text" id="name-place" />
+                  <Form.Control
+                    type="number"
+                    id="name-place"
+                    name="num"
+                    value={formData.num}
+                    onChange={handleChange}
+                  />
                 </Form.Group>
               </Col>
             </Row>
@@ -183,16 +225,18 @@ const Footer = () => {
             <InputGroup id="happy">
               <InputGroup.Text id="happy-title">Lời chúc</InputGroup.Text>
               <Form.Control
+                name="wish"
                 as="textarea"
                 aria-label="With textarea"
                 id="happy-content"
                 rows={2}
+                onChange={handleChange}
               />
             </InputGroup>
           </Row>
           <Button
             variant="containeried"
-            // type="submit"
+            type="submit"
             id="submit-button"
             onClick={handleSubmit}
           >
