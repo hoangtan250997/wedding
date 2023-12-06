@@ -9,14 +9,28 @@ import InputGroup from "react-bootstrap/InputGroup";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import footerPic from "./Footer.jpg";
 import { useMediaQuery } from "react-responsive";
+import axios from "axios";
 
 const Footer = () => {
+  const [responseData, setResponseData] = useState(null);
+
   const [formData, setFormData] = useState({
     name: "",
     num: "",
-    check: "",
+    checked: "",
     wish: "",
   });
+
+  //Axios
+  const axiosConfig = {
+    method: "post",
+    url: "http://14.225.255.185:8081/wedding/api/guest",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: formData,
+  };
+
   const isMinWidth850 = useMediaQuery({ minWidth: 1450 });
 
   const [item, setItem] = useState({ gai: "1", trai: "2", no: "0" });
@@ -34,7 +48,7 @@ const Footer = () => {
   const handleChangeOtion = (e) => {
     e.persist();
     console.log(e.target.value);
-    formData.check = e.target.value;
+    formData.checked = e.target.value;
     setItem((prevState) => ({
       ...prevState,
       kindOfStand: e.target.value,
@@ -43,15 +57,25 @@ const Footer = () => {
 
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-    console.log(formData);
+
+    if (form.checkValidity()) {
+      try {
+        const response = await axios(axiosConfig);
+        setResponseData(response.data);
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
+    }
     setValidated(true);
   };
+
   return (
     <div className="background">
       <img src={footerPic} alt="" className="footerPic" />
@@ -73,6 +97,7 @@ const Footer = () => {
                     className="mb-3"
                     controlId="validationCustom01"
                     id="check"
+                    required
                   >
                     <Form.Check
                       value={item.gai}
@@ -151,46 +176,43 @@ const Footer = () => {
             <Row>
               <Col xs={8} md={8}>
                 <h1 className="name-content">Bạn sẽ đến chứ</h1>
-                <Form.Group className="mb-3" controlId="validationCustom03">
-                  {" "}
-                  <Row>
-                    <Form.Check
-                      value={item.gai}
-                      type="radio"
-                      aria-label="radio 1"
-                      label="Tham dự vào ngày 23/12 (Tiệc Nhà Gái)"
-                      className="check"
-                      onChange={handleChangeOtion}
-                      checked={kindOfStand === item.gai}
-                    />
-                    <Form.Check
-                      value={item.trai}
-                      type="radio"
-                      aria-label="radio 2"
-                      label="Tham dự vào ngày 24/12 (Tiệc Nhà Trai)"
-                      onChange={handleChangeOtion}
-                      checked={kindOfStand === item.trai}
-                      className="check"
-                    />
-                    <Form.Check
-                      value={item.no}
-                      type="radio"
-                      aria-label="radio 2"
-                      label="Không đến tham dự được rồi!"
-                      onChange={handleChangeOtion}
-                      checked={kindOfStand === item.no}
-                      className="check"
-                    />
-                  </Row>
+                <Form.Group className="mb-3">
+                  <Form.Check
+                    value={item.gai}
+                    type="radio"
+                    aria-label="radio 1"
+                    label="Tham dự vào ngày 23/12 (Tiệc Nhà Gái)"
+                    className="check"
+                    onChange={handleChangeOtion}
+                    checked={kindOfStand === item.gai}
+                    isValid={kindOfStand === item.gai}
+                  />
+                  <Form.Check
+                    value={item.trai}
+                    type="radio"
+                    aria-label="radio 2"
+                    label="Tham dự vào ngày 24/12 (Tiệc Nhà Trai)"
+                    onChange={handleChangeOtion}
+                    checked={kindOfStand === item.trai}
+                    className="check"
+                  />
+                  <Form.Check
+                    value={item.no}
+                    type="radio"
+                    aria-label="radio 2"
+                    label="Không đến tham dự được rồi!"
+                    onChange={handleChangeOtion}
+                    checked={kindOfStand === item.no}
+                    className="check"
+                  />
+                  <Form.Control.Feedback type="invalid" id="required">
+                    Please select an option
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
 
               <Col xs={4} md={4}>
-                <Form.Group
-                  className="mb-3"
-                  controlId="validationCustom02"
-                  id="name"
-                >
+                <Form.Group className="mb-3" id="name">
                   <Form.Label id="name-title">Tên của bạn</Form.Label>
                   <Form.Control
                     type="text"
@@ -200,8 +222,8 @@ const Footer = () => {
                     required
                   />
                   <Form.Control.Feedback type="invalid" id="required">
-                      Vui lòng nhập tên của bạn.
-                    </Form.Control.Feedback>
+                    Vui lòng nhập tên của bạn.
+                  </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group
@@ -234,12 +256,7 @@ const Footer = () => {
               />
             </InputGroup>
           </Row>
-          <Button
-            variant="containeried"
-            type="submit"
-            id="submit-button"
-            onClick={handleSubmit}
-          >
+          <Button variant="containeried" type="submit" id="submit-button">
             <MailOutlineIcon></MailOutlineIcon>
           </Button>
         </div>

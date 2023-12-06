@@ -20,13 +20,15 @@ const Time = () => {
   return (
     <div className="time">
       <img src={timePic} alt="" id="time-pic" />
-      <span className="main-content" id="title">Đám cưới của chúng mình</span>
+      <span className="main-content" id="title">
+        Đám cưới của chúng mình
+      </span>
 
       <div className="content">
         <h1 className="sub-content">24 - 12 - 2023</h1>
-
+        <Row></Row>
         <Row className="timer">
-          <Col>
+          <Col style={{ padding: "0" }}>
             <span className="time-content">{timeLeft.days} </span>
             <span className="sub-content">ngày</span>
           </Col>
