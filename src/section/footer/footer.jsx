@@ -55,28 +55,23 @@ const Footer = () => {
   const [validated, setValidated] = useState(false);
 
   function check(event) {
+    // const form = event.currentTarget;
+  }
+
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
 
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-    setValidated(true);
-  }
+    if (form.checkValidity()) {
+      window.alert("Cảm ơn bạn!!");
 
-  const handleSubmit = async (event) => {
-    check(event);
-
-    if (validated === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    if (validated) {
       await axios(axiosConfig);
-      window.alert("Cảm ơn bạn!");
-      window.location.reload();
+      // window.location.reload();
     }
+    setValidated(true);
   };
   return (
     <div className="background">
@@ -270,7 +265,8 @@ const Footer = () => {
           <Button
             variant="containeried"
             id="submit-button"
-            onClick={handleSubmit}
+            type="submit"
+            onClick={check}
           >
             <MailOutlineIcon></MailOutlineIcon>
           </Button>
