@@ -71,6 +71,8 @@ const Footer = () => {
         const response = await axios(axiosConfig);
         setResponseData(response.data);
         window.alert("Cảm ơn bạn!");
+        document.write("Cảm ơn bạn!");
+
       } catch (error) {
         console.error("Error:", error.message);
       }
