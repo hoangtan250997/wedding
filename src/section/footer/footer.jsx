@@ -70,6 +70,7 @@ const Footer = () => {
         console.log(axiosConfig);
         const response = await axios(axiosConfig);
         setResponseData(response.data);
+        window.alert("Cảm ơn bạn!");
       } catch (error) {
         console.error("Error:", error.message);
       }
