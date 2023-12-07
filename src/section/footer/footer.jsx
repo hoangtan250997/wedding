@@ -54,23 +54,30 @@ const Footer = () => {
 
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = async (event) => {
+  function check(event) {
     const form = event.currentTarget;
 
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
+    setValidated(true);
+  }
 
-    if (form.checkValidity()) {
-      // await new Promise((resolve) => setTimeout(resolve, 100000));
-      window.alert("Hi");
-      // const response = await axios(axiosConfig);
+  const handleSubmit = async (event) => {
+    check(event);
+
+    if (validated === false) {
+      event.preventDefault();
+      event.stopPropagation();
     }
 
-    setValidated(true);
+    if (validated) {
+      await axios(axiosConfig);
+      window.alert("Cảm ơn bạn!");
+      window.location.reload();
+    }
   };
-
   return (
     <div className="background">
       <img src={footerPic} alt="" className="footerPic" />
