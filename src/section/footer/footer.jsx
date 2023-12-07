@@ -67,12 +67,15 @@ const Footer = () => {
 
     if (form.checkValidity()) {
       try {
+        console.log(axiosConfig);
         const response = await axios(axiosConfig);
         setResponseData(response.data);
       } catch (error) {
         console.error("Error:", error.message);
       }
     }
+    event.preventDefault();
+    event.stopPropagation();
     setValidated(true);
   };
 
@@ -162,12 +165,16 @@ const Footer = () => {
                   >
                     <Form.Label id="name-title">Số điện thoại</Form.Label>
                     <Form.Control
-                      type="number"
+                      type="tel"
                       id="name-place"
                       name="num"
                       value={formData.num}
                       onChange={handleChange}
+                      required
                     />
+                    <Form.Control.Feedback type="invalid" id="required">
+                      Vui lòng nhập sđt của bạn.
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
               </Row>
@@ -233,12 +240,16 @@ const Footer = () => {
                 >
                   <Form.Label id="name-title">Số điện thoại</Form.Label>
                   <Form.Control
-                    type="number"
+                    type="tel"
                     id="name-place"
                     name="num"
                     value={formData.num}
                     onChange={handleChange}
+                    required
                   />
+                  <Form.Control.Feedback type="invalid" id="required">
+                    Vui lòng nhập sđt của bạn.
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Col>
             </Row>
