@@ -10,10 +10,9 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import footerPic from "./Footer.jpg";
 import { useMediaQuery } from "react-responsive";
 import axios from "axios";
+import Toast from "react-bootstrap/Toast";
 
 const Footer = () => {
-  const [responseData, setResponseData] = useState(null);
-
   const [formData, setFormData] = useState({
     name: "",
     num: "",
@@ -38,7 +37,6 @@ const Footer = () => {
   const { kindOfStand } = item;
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(e);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -47,7 +45,6 @@ const Footer = () => {
 
   const handleChangeOtion = (e) => {
     e.persist();
-    console.log(e.target.value);
     formData.checked = e.target.value;
     setItem((prevState) => ({
       ...prevState,
@@ -66,25 +63,18 @@ const Footer = () => {
     }
 
     if (form.checkValidity()) {
-      try {
-        console.log(axiosConfig);
-        const response = await axios(axiosConfig);
-        setResponseData(response.data);
-        window.alert("Cảm ơn bạn!");
-        document.write("Cảm ơn bạn!");
-
-      } catch (error) {
-        console.error("Error:", error.message);
-      }
+      // await new Promise((resolve) => setTimeout(resolve, 100000));
+      window.alert("Hi");
+      // const response = await axios(axiosConfig);
     }
-    event.preventDefault();
-    event.stopPropagation();
+
     setValidated(true);
   };
 
   return (
     <div className="background">
       <img src={footerPic} alt="" className="footerPic" />
+
       <Form
         className="invitation-form"
         noValidate
@@ -168,7 +158,7 @@ const Footer = () => {
                   >
                     <Form.Label id="name-title">Số điện thoại</Form.Label>
                     <Form.Control
-                      type="tel"
+                      type="number"
                       id="name-place"
                       name="num"
                       value={formData.num}
@@ -243,7 +233,7 @@ const Footer = () => {
                 >
                   <Form.Label id="name-title">Số điện thoại</Form.Label>
                   <Form.Control
-                    type="tel"
+                    type="number"
                     id="name-place"
                     name="num"
                     value={formData.num}
@@ -270,7 +260,11 @@ const Footer = () => {
               />
             </InputGroup>
           </Row>
-          <Button variant="containeried" type="submit" id="submit-button">
+          <Button
+            variant="containeried"
+            id="submit-button"
+            onClick={handleSubmit}
+          >
             <MailOutlineIcon></MailOutlineIcon>
           </Button>
         </div>
